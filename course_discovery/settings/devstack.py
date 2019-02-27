@@ -4,6 +4,12 @@ from course_discovery.settings.production import *
 
 DEBUG = True
 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8888',
+)
+
 # Docker does not support the syslog socket at /dev/log. Rely on the console.
 LOGGING['handlers']['local'] = {
     'class': 'logging.NullHandler',

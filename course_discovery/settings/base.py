@@ -36,6 +36,7 @@ INSTALLED_APPS = [
 
 THIRD_PARTY_APPS = [
     'release_util',
+    'corsheaders',
     'rest_framework',
     'rest_framework_swagger',
     'social_django',
@@ -79,6 +80,7 @@ INSTALLED_APPS += ['haystack']
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
